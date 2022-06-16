@@ -41,9 +41,9 @@ random_seed = 1000
 run_desc = 'mri'
 train    = dict(corrupt_params=dict(), augment_params=dict())
 
-run_desc += '-ixi'
-train.update(dataset_train=dict(fn='ixi_train.pkl'), augment_params=dict(translate=64)) # 4936 images, lots of augmentation.
-train.update(dataset_test=dict(fn='ixi_valid.pkl'))                     # use all images, should be 1000
+run_desc += '-nyu'
+train.update(dataset_train=dict(fn='nyu_train.pkl'), augment_params=dict(translate=64)) # 4936 images, lots of augmentation.
+train.update(dataset_test=dict(fn='nyu_valid.pkl'))                     # use all images, should be 1000
 
 train['run_func_name'] = 'train_mri.train'
 
